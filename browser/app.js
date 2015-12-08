@@ -1,11 +1,10 @@
 // app.js
-// var app = angular.module('devDance', [])
-// window.app = app;
-////rooms: 
-// we need this socket object to send messages to our server 
-var socket = io(window.location.origin); 
 
-// var renData;
+// var Four = require('./fourLibrary/four.js')
+
+console.log("Four Arrangements: ", Four.arrangements)
+
+var socket = io(window.location.origin); 
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -14,13 +13,12 @@ var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
 directionalLight.position.set( 0, 1, 0 );
 scene.add( directionalLight );
 
-
-
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-// CUBE
+// CUBE creator
+
 var geometry = new THREE.BoxGeometry( 2, 0.2, 3.5 );
 var material = new THREE.MeshPhongMaterial( { color: 0x4169e1, transparency: 0} );
 var cube = new THREE.Mesh( geometry, material );
@@ -57,8 +55,8 @@ socket.on('connect', function(){
 
 // -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
 //	AUTO-MOVING FOR TESTING RENDER GRAPHICS
-	// cube.rotation.x += 0.015;
-	// cube.rotation.y += 0.01;
+// 		cube.rotation.x += 0.015;
+//		cube.rotation.y += 0.01;
 // -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 		var m = new THREE.Matrix4();
