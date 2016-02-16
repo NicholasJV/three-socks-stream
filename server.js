@@ -29,6 +29,7 @@ if (oData){
 } else { console.log('no data has made it to the server')}
 
 
+// app.use(express.static(path.join(__dirname, 'drizzy')));
 app.use(express.static(path.join(__dirname, 'scripts')));
 app.use(express.static(path.join(__dirname, 'browser')));
 app.use(express.static(path.join(__dirname, 'fourLibrary')));
@@ -43,12 +44,8 @@ app.get('/detect', function (req, res){
 
 
 
-
-
 server.listen(8080, function () {
     console.log('The server is listening on port 8080!');
 });
 
-
-// app.use('/', )
 

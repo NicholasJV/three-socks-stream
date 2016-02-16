@@ -1,8 +1,12 @@
 // app.js
 
 // var Four = require('./fourLibrary/four.js')
+// console.log(fourArr)
+// var fourArr = Four.Arrangement();
 
 console.log("Four Arrangements: ", Four.arrangements)
+
+
 
 var socket = io(window.location.origin); 
 
@@ -22,6 +26,9 @@ document.body.appendChild( renderer.domElement );
 var geometry = new THREE.BoxGeometry( 2, 0.2, 3.5 );
 var material = new THREE.MeshPhongMaterial( { color: 0x4169e1, transparency: 0} );
 var cube = new THREE.Mesh( geometry, material );
+
+
+
 scene.add( cube );
 
 var light = new THREE.AmbientLight( 0x404040 ); // soft white light
@@ -53,18 +60,10 @@ socket.on('connect', function(){
 	function render() {
 		requestAnimationFrame( render );
 
-// -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
-//	AUTO-MOVING FOR TESTING RENDER GRAPHICS
-// 		cube.rotation.x += 0.015;
-//		cube.rotation.y += 0.01;
-// -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 		var m = new THREE.Matrix4();
 		var mx = new THREE.Matrix4();
 		var my = new THREE.Matrix4();
 		var mz = new THREE.Matrix4();
-
-
 
 		mx.makeRotationX(beta);
 		my.makeRotationZ(-gamma);
@@ -82,7 +81,27 @@ socket.on('connect', function(){
 	render();
 })
 
-	
+
+// -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
+//	AUTO-MOVING FOR TESTING RENDER GRAPHICS
+// 		cube.rotation.x += 0.015;
+//		cube.rotation.y += 0.01;
+// -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 
