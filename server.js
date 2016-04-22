@@ -5,13 +5,14 @@ var server = http.createServer();
 var express = require('express');
 var app = express();
 var socketio = require('socket.io');
-//This will send typical CRUD requests down to
+
+// This will send typical CRUD requests down to
 // our express server
 server.on('request', app);
+
 var io = socketio(server);
 
-
-
+// will assign device orientation data to oData:
 var oData;
 
 io.on('connection', function(socket){
@@ -26,8 +27,7 @@ io.on('connection', function(socket){
 
 if (oData){
 	setInterval(function(){console.log("from server: ", oData)}, 1000);		
-} else { console.log('no data has made it to the server')}
-
+} else { console.log('no data has made it to the server yet') }
 
 // app.use(express.static(path.join(__dirname, 'drizzy')));
 app.use(express.static(path.join(__dirname, 'scripts')));

@@ -1,12 +1,5 @@
 // app.js
-
-// var Four = require('./fourLibrary/four.js')
-// console.log(fourArr)
-// var fourArr = Four.Arrangement();
-
-console.log("Four Arrangements: ", Four.arrangements)
-
-
+// console.log("Four Arrangements: ", Four.arrangements)
 
 var socket = io(window.location.origin); 
 
@@ -55,7 +48,8 @@ socket.on('connect', function(){
 		}		
 	})
 
-	setInterval(function(){console.log('device data via server- beta:', Math.floor(beta), 'gamma:',  Math.floor(gamma))}, 1000)
+	// uncomment this to see device data stream logged:
+	// setInterval(function(){console.log('device data via server- beta:', Math.floor(beta), 'gamma:',  Math.floor(gamma))}, 1000)
 	
 	function render() {
 		requestAnimationFrame( render );
@@ -74,7 +68,6 @@ socket.on('connect', function(){
 
 		cube.rotation.setFromRotationMatrix(m);
 
-			
 		renderer.render( scene, camera );
 	}
 
@@ -87,91 +80,5 @@ socket.on('connect', function(){
 // 		cube.rotation.x += 0.015;
 //		cube.rotation.y += 0.01;
 // -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-			// cube.rotation.set(beta);
-
-			// cube.rotation.x += (
-						// renderBeta +
-						// || 
-						// 0.0015
-						// );
-			// cube.rotation.y += (
-							// gamma || 
-							// 0.001);
-
-	// setInterval(function(){
-	// 	var stepBeta = beta;
-	// 	var stepGamma = gamma;
-	// }, 500)
-
-	function render(renderBeta, renderGamma) {
-		requestAnimationFrame( render );
-			var radians = 0.01
-			
-			// update  frames only:
-			if (frameCounter <= 1000){
-				frameCounter += 1;
-			} else { frameCounter = 0 }
-
-			if (frameCounter % 20 === 0){
-				radians += renderBeta;
-			}
-
-			cube.rotateX(radians
-				// + renderBeta
-				);
-			// cube.rotateY(renderGamma);
-			// cube.rotation.x += (
-						// renderBeta +
-						// || 
-						// 0.0015
-						// );
-			// cube.position.x += renderGamma
-			// cube.rotation.y += (
-			// 				// gamma || 
-			// 				0.001);
-		renderer.render( scene, camera );
-	}
-
-			// var radians = 0.01
-			
-			// update  frames only:
-			// if (frameCounter <= 1000){
-			// 	frameCounter += 1;
-			// } else { frameCounter = 0 }
-
-			// if (frameCounter % 20 === 0){
-			// 	radians += renderBeta;
-			// }
-
-			// cube.rotation.rotateX 
-				// + renderBeta
-				// );
-			// cube.rotateY(renderGamma);
-			
-
-
-*/
-
-
-
-
 
 
