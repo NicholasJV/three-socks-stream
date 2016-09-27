@@ -49,7 +49,8 @@ socket.on('connect', function(){
 	})
 
 	// uncomment this to see device data stream logged:
-	// setInterval(function(){console.log('device data via server- beta:', Math.floor(beta), 'gamma:',  Math.floor(gamma))}, 1000)
+	// setInterval(function(){console.log('device data via server- beta:', 
+	//		Math.floor(beta), 'gamma:',  Math.floor(gamma))}, 1000)
 	
 	function render() {
 		requestAnimationFrame( render );
