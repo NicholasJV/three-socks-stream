@@ -42,5 +42,5 @@ app.get('/control', function (req, res){
 })
 
 server.listen(port, function () {
-  console.log(chalk.green('The server is listening on port 8080!'));
+  console.log(chalk.green('The server is listening') + chalk.yellow(' on port', port));
 });
