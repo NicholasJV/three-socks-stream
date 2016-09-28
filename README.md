@@ -8,9 +8,8 @@ Fun!!!
 Socket.io and Three.js (hence the highly original, stunning title)
 
 -----
-## To use:
+## Setup:
 
-### Setup: 
 Clone to local, `npm install`, then `npm start`
 
 Your console should tell you that the server is listening on port 8080.  
