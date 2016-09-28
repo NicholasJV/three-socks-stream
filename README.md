@@ -1,4 +1,4 @@
-# three-socks-stream
+# three socks
 
 #### With this app you can move a 3D rendered object in the browser using your mobile device like a controller!
 
@@ -36,4 +36,4 @@ If all of the above worked, you should see that block-like-device-shaped-thing s
 **Also, fun sidenote:**  Technically this may work on your laptop with just two different browser windows... because some laptops have an orientation sensor! Who woulda thunk it? (I've only tested with a MacBook Pro, and it works, though as you'd imagine, it is less smooth than the one in a mobile device as.)  
 
 -----    
-#### Now, go fork and make something cooler!
+#### Now, go fork and use it to make something cooler-looking!
