@@ -6,6 +6,8 @@
 
 h1 {
 	font-size: 52px;
+	font-kerning: auto;
+	letter-spacing: 0.2em;
 	margin: 10px;
 }
 
