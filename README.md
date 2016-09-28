@@ -11,8 +11,8 @@ Socket.io and Three.js (hence the highly original, stunning title)
 Using the same wifi network for both,  
 [**go here**](https://three-socks.herokuapp.com) in your desktop/laptop browser (standard browser? OG browser? non-mobile browser? Can we do better here people?)  
 [**then go here**](https://three-socks.herokuapp.com/control) with your mobile browser  
-(only tested with iPhone/Safari thus far--let me know in the comments if Android works!)
-
+(only tested with iPhone/Safari thus far--let me know in the comments if Android works!)  
+aaand... you'll see!
 
 -----
 ### The fun way (set it up yourself locally):
