@@ -28,6 +28,8 @@ if (oData){
 
 // =-=-=-=-=-=-= Simple server routes =-=-=-=-=-=-=-=
 
+var port = (process.env.PORT || 8080)
+
 app.use(express.static(path.join(__dirname, 'scripts')));
 app.use(express.static(path.join(__dirname, 'browser')));
 
@@ -39,6 +41,6 @@ app.get('/control', function (req, res){
 	res.sendFile(path.join(__dirname, 'browser/detect.html'))
 })
 
-server.listen(8080, function () {
+server.listen(port, function () {
   console.log(chalk.green('The server is listening on port 8080!'));
 });

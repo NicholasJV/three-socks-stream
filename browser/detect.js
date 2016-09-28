@@ -1,15 +1,12 @@
 // detect.js
 
-var socket = io(window.location.origin); 
+var socket = io(window.location.origin);
 socket.on('connect', function(){
-
     console.log('device made a two-way connection!');
     var detectData;
-
     if (window.DeviceOrientationEvent) {
         // document.getElementById("doEvent").innerHTML = "DeviceOrientation";
         console.log('device orientation supported')
-
         window.addEventListener('deviceorientation', function(eventData) {
         // gamma is the left-to-right tilt in degrees, where right is positive
             tiltLR = eventData.gamma;
@@ -23,20 +20,12 @@ socket.on('connect', function(){
                beta: eventData.beta,
                gamma: eventData.gamma
             };
-            // console.log(data);
+
             detectData = data;
+            socket.emit('orientationData', data);
 
-            socket.emit('orientationData', data);  
-
-        // deviceOrientationHandler(tiltLR, tiltFB, dir);
-        }, false);       
-    } 
+        }, false);
+    }
 
     setInterval(function(){console.log("sending this device data: ", detectData)}, 1000)
 })
-
-
-
-
-
-

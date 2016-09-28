@@ -6,25 +6,35 @@
 		<meta charset=utf-8>
 		<title> T h r e e  S o c k s </title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="socket.io/socket.io.js"></script>
 	</head>
 
-    <body>
-		<center>
-			<h1> T h r e e - S o c k s <h1>
-			<div id="stream-canvas" class="centered-mains">
-		  	<script src="three.min.js"></script>
-		  	<script src="socket.io/socket.io.js"></script>
-		  	<script src="app.js"></script>
-			</div>
-		</center>
-    </body>
+  <body>
+		  <header class="title-border">
+		    <h1> T h r e e - S o c k s <h1>
+		  </header>
+		  <div class='canvas-container'>
+		    <div id="stream-canvas" class="centered-mains clearfix">
+		      <script src="three.min.js">
+						// Three.js module is here to simplify placement of the canvas
+						// socket and app scripts MUST come after Three.js
+					</script>
+		      <script src="app.js"></script>
+		    </div>
+		  </div>
+		  <div class="readme-ref">
+		    <span>To see the point of this,</span>
+		    <a href="https://github.com/NicholasJV/three-socks-stream"> check out the github repo README </a>
+		  </div>
+  </body>
 
 </html>
 
 
-<!-- these GIFS were used for a presentation -->
+<!-- these GIFS were used for fun for a presentation -->
 		<!-- <div class="centered-mains"> -->
-		<!-- <img class="giphy" src="https://38.media.tumblr.com/7abf3384372cd71b8b47a9b3a03d28ea/tumblr_nt9jfo8IwI1svefdfo3_500.gif">
+		<!--
+			<img class="giphy" src="https://38.media.tumblr.com/7abf3384372cd71b8b47a9b3a03d28ea/tumblr_nt9jfo8IwI1svefdfo3_500.gif">
 			<img class="giphy" src="http://static.dezeen.com/uploads/2015/11/Minority-Report_movie_2002_Alex-McDowell_dezeen_1.gif">
 			<img class="giphy" src="http://images.says.com/uploads/story_source/source_image/315130/c41c.gif"> -->
 		<!-- </div> -->

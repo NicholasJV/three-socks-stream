@@ -1,7 +1,6 @@
 // app.js
-// console.log("Four Arrangements: ", Four.arrangements)
 
-var socket = io(window.location.origin); 
+var socket = io(window.location.origin);
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -15,12 +14,9 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 // CUBE creator
-
 var geometry = new THREE.BoxGeometry( 2, 0.2, 3.5 );
 var material = new THREE.MeshPhongMaterial( { color: 0x4169e1, transparency: 0} );
 var cube = new THREE.Mesh( geometry, material );
-
-
 
 scene.add( cube );
 
@@ -32,26 +28,25 @@ camera.position.z = 4;
 socket.on('connect', function(){
 
     console.log('app made a two-way connection!');
-    
+
     var renData;
     var beta = 0;
     var gamma = 0;
     var alpha = 0;
 
 	socket.on('broadcastData', function(renderData){
-    	if(renderData){
-    		renData = renderData;
-			// setInterval(function(){ 
-			beta = renData.beta * Math.PI/180;
-			gamma = renData.gamma * Math.PI/180;
-			alpha = renData.alpha * Math.PI/180;
-		}		
+    if(renderData){
+    	// renData = renderData;
+			beta = renderData.beta * Math.PI/180;
+			gamma = renderData.gamma * Math.PI/180;
+			alpha = renderData.alpha * Math.PI/180;
+		}
 	})
 
 	// uncomment this to see device data stream logged:
-	// setInterval(function(){console.log('device data via server- beta:', 
+	// setInterval(function(){console.log('device data via server- beta:',
 	//		Math.floor(beta), 'gamma:',  Math.floor(gamma))}, 1000)
-	
+
 	function render() {
 		requestAnimationFrame( render );
 
@@ -81,5 +76,3 @@ socket.on('connect', function(){
 // 		cube.rotation.x += 0.015;
 //		cube.rotation.y += 0.01;
 // -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-
