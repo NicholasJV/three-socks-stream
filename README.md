@@ -24,6 +24,6 @@ On your mobile device browser, navigate to: `[your IP address]:8080/control`.
 You'll know it's working if you see "a new client connected".
 (It should say that twice in the console. The first one came when you connected with your standard non-mobile browser.)
 
-If all of the above worked, you should see that block-like-device-shaped-thing start to dance and move along with the movements of your mobile device!
+If all of the above worked, you should see that block-like-device-shaped-thing start to flippety-flop around and move along with the movements of your mobile device!
 
   - **Also, fun sidenote:**  Technically this may work on your laptop with just two different browser windows... because some laptops have an orientation sensor! Who woulda thunk it? (I've only tested with a MacBook Pro, and it works, though as you'd imagine, it is less smooth than the one in a mobile device as.)
