@@ -32,9 +32,12 @@ socket.on('connect', function(){
 	socket.on('broadcastData', function(renderData){
     if(renderData){
     	// renData = renderData;
+      // alpha is the compass direction the device is facing in degrees
+      alpha = renderData.alpha * Math.PI/180;
+      // beta is the front-to-back tilt in degrees, where front is positive
 			beta = renderData.beta * Math.PI/180;
+      // gamma is the left-to-right tilt in degrees, where right is positive
 			gamma = renderData.gamma * Math.PI/180;
-			alpha = renderData.alpha * Math.PI/180;
 		}
 	})
 
@@ -64,7 +67,6 @@ socket.on('connect', function(){
 
 	render();
 })
-
 
 // -=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-
 //	AUTO-MOVING FOR TESTING RENDER GRAPHICS

@@ -10,17 +10,16 @@ Socket.io and Three.js (hence the highly original, stunning title)
 -----
 ### Setup:
 
-Clone to local, `npm install`, then `npm start`
+Clone, `npm install`, `npm start`
 
-Your console should tell you that the server is listening on port 8080.  
-When you go to your `localhost:8080` in your browser, you should see a Three-Socks title and dark background.
+At `localhost:8080` in your browser, you should see a Three-Socks title and dark background (it gets more interesting at the next part:).
 
 ### The fun part
-Get your phone or tablet out (only tested this on iPhones though-- comment if Android works!).  
 Get your IP address from your local server (your computer).  
   - **tip:** on OSX, an easy way to get your IP address is [opt]-click on your wifi/network icon in the menu bar
 
 On your mobile device browser, navigate to: `[your IP address]:8080/control`.
+(only tested this on iPhones but it should work in any browser, please comment if you have issues).  
 
 You'll know it's working if you see "a new client connected".
 (It should say that twice in the console. The first one came when you connected with your standard non-mobile browser.)
